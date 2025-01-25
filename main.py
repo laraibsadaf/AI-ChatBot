@@ -4,7 +4,7 @@ from db import engine, metadata
 
 app = FastAPI()
 
-# Load tables from the database
+# Tables from Database
 suppliers = Table('Suppliers', metadata, autoload_with=engine)
 products = Table('Products', metadata, autoload_with=engine)
 
