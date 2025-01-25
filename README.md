@@ -16,15 +16,26 @@ CREATE TABLE Products (
     FOREIGN KEY (Supplier_ID) REFERENCES Suppliers(ID)
 );
 
--- Insert sample data
-INSERT INTO Suppliers (Name, Contact_Info, Product_Categories_Offered)
+INSERT INTO Suppliers (Name, ContactInfo, ProductCategories)
 VALUES
-('TechWorld Inc.', 'techworld@example.com', 'Electronics, Laptops'),
-('HomeGoods Ltd.', 'homegoods@example.com', 'Furniture, Decor'),
-('GadgetHub', 'gadgethub@example.com', 'Smartphones, Gadgets');
+('Tech World', 'techworld@example.com', 'Laptops, Tablets, Accessories'),
+('Gadget Hub', 'gadgets@example.com', 'Mobiles, Wearables, Accessories'),
+('Home Essentials', 'homeessentials@example.com', 'Home Appliances, Kitchen Tools'),
+('Game Arena', 'gamearena@example.com', 'Gaming Consoles, Accessories, Games'),
+('Office Supplies', 'office@example.com', 'Stationery, Furniture, Office Equipment');
 
-INSERT INTO Products (Name, Brand, Price, Category, Description, Supplier_ID)
+INSERT INTO Products (Name, Brand, Price, Category, Description, SupplierID)
 VALUES
-('Smartphone XYZ', 'GadgetBrand', 699.99, 'Electronics', 'Latest model with 5G support', 3),
-('Office Chair', 'ErgoComfort', 120.50, 'Furniture', 'Ergonomic office chair', 2),
-('Gaming Laptop', 'TechPro', 1499.00, 'Laptops', 'High-performance gaming laptop', 1);
+('Ultra Laptop', 'Brand Z', 1200.99, 'Laptops', 'A sleek, high-performance laptop.', 1),
+('Budget Tablet', 'Brand X', 299.99, 'Tablets', 'An affordable tablet for everyday use.', 1),
+('Smartphone A12', 'Brand W', 499.99, 'Mobiles', 'A budget-friendly smartphone with great features.', 2),
+('Smartwatch Pro', 'Brand V', 199.99, 'Wearables', 'A smartwatch with advanced health tracking.', 2),
+('Blender 3000', 'Brand K', 89.99, 'Home Appliances', 'A powerful blender for your kitchen.', 3),
+('Microwave Oven X', 'Brand Y', 150.99, 'Home Appliances', 'Compact microwave oven with multiple settings.', 3),
+('Gaming Console X', 'Brand T', 499.99, 'Gaming Consoles', 'Next-gen gaming console for enthusiasts.', 4),
+('Ergonomic Chair', 'Brand U', 219.99, 'Office Equipment', 'Comfortable ergonomic chair for long hours.', 5),
+('Standing Desk', 'Brand U', 350.00, 'Office Equipment', 'Adjustable height desk for office use.', 5),
+('Noise-Canceling Headphones', 'Brand Q', 149.99, 'Accessories', 'High-quality headphones with active noise canceling.', 1),
+('Wireless Keyboard', 'Brand P', 79.99, 'Accessories', 'Compact wireless keyboard for laptops and desktops.', 1),
+('Dishwasher 500', 'Brand L', 550.00, 'Home Appliances', 'Energy-efficient dishwasher for large households.', 3),
+('Gaming Mouse', 'Brand T', 49.99, 'Accessories', 'Precision gaming mouse with customizable buttons.', 4);
